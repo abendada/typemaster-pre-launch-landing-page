@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap");
+
+html {
+  font-family: Barlow;
+}
+
+body {
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 26px;
+  color: #7b8bad;
+  font-weight: 500;
+  font-family: Barlow;
+}
+
+.top-bar {
+  margin-top: 55px;
+}
+
+.top-bar {
+  max-width: 1111px;
+  width: 100%;
+}
+
+.footer {
+  max-width: 1111px;
+}
+
+.logo {
+  background: url(./assets/shared/logo.svg);
+  height: 40px;
+  width: 40px;
+}
+
+p {
+  margin-bottom: 40px;
+}
+
+h1,
+h2,
+h3 {
+  color: #162542;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 56px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+button {
+  padding: 16px 26px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  line-height: 26px;
+  font-weight: bold;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button.orange {
+  background-color: #f16718;
+  color: #fff;
+}
+
+button.orange:hover {
+  background-color: #ff9b62;
+}
+
+button.blue {
+  background-color: #e8eff2;
+}
+
+button.blue:hover {
+  background-color: #162542;
+  color: #fff;
+}
+
+.release {
+  text-transform: uppercase;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.top .col {
+  flex: 1 1 455px;
+  margin-right: 30px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom .col {
+  flex: 0 1 255px;
+  margin-left: 30px;
+}
+
+.image1,
+.image2,
+.image3 {
+  border-radius: 20px;
+  background-size: cover;
+}
+
+.image1 {
+  background-image: url(./assets/desktop/image-keyboard.jpg);
+  flex: 1 1 540px;
+  height: 480px;
+}
+
+.images {
+  display: flex;
+  flex: 0 1 730px;
+  height: 480px;
+}
+
+.image2 {
+  position: relative;
+  background: #f16718;
+  flex: 1 1 255px;
+  overflow: hidden;
+}
+
+.image2::after {
+  content: "";
+  background-image: url(./assets/desktop/image-phone-and-keyboard.jpg);
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+}
+
+.image3 {
+  background-image: url(./assets/desktop/image-glass-and-keyboard.jpg);
+  flex: 1 1 445px;
+  margin-left: 30px;
+}
+
+.release {
+  display: flex;
+  align-items: center;
+}
+
+.release *:not(:first-child) {
+  margin-left: 40px;
+  justify-content: flex-start;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  margin-top: 140px;
+  margin-left: -30px;
+  margin-bottom: 70px;
+}
+
+.footer .col {
+  flex: 0 1 255px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.icon {
+  height: 65px;
+  width: 65px;
+  margin-bottom: 48px;
+  background-color: #f16718;
+  border-radius: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon.compatible {
+  background-image: url(./assets/shared/icon-compatible.svg);
+}
+
+.icon.bluetooth {
+  background-image: url(./assets/shared/icon-bluetooth.svg);
+}
+
+.icon.battery {
+  background-image: url(./assets/shared/icon-battery.svg);
+}
+
+.icon.light {
+  background-image: url(./assets/shared/icon-light.svg);
+}
+
+.copyright {
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  align-self: stretch;
+  margin-top: 50px;
+}
+
+.content::before {
+  content: "";
+  flex: 1;
+  background-color: #e8eff2;
+  align-self: flex-end;
+  height: 236px;
+  border-radius: 0 20px 20px 0;
+  margin-right: 30px;
+}
+
+.content::after {
+  content: "";
+  flex: 1;
+  background-color: #e8eff2;
+  align-self: flex-start;
+  height: 236px;
+  border-radius: 20px 0 0 20px;
+  margin-left: 30px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1111px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1160px) {
+  .main-container {
+    padding: 30px;
+    overflow: hidden;
+  }
+  .content::before,
+  .content::after {
+    content: none;
+  }
+  .image1 {
+    margin-right: -40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bottom {
+    flex-wrap: wrap;
+  }
+
+  .bottom .col {
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 72px;
+    flex-grow: 1;
+  }
+
+  .image1 {
+    background-image: url(./assets/tablet/image-keyboard.jpg);
+  }
+
+  .image2::after {
+    background-image: url(./assets/tablet/image-phone-and-keyboard.jpg);
+  }
+
+  .image3 {
+    background-image: url(./assets/tablet/image-glass-and-keyboard.jpg);
+  }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .footer .col {
+    flex: 0 1 309px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  h2 {
+    font-size: 32;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  button {
+    padding: 11px 14px;
+  }
+
+  .main-container {
+    padding: 23px;
+  }
+
+  .top-bar,
+  .top {
+    flex-wrap: wrap;
+  }
+
+  .top-bar {
+    margin-top: 0;
+  }
+
+  .top .col {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  .bottom .col {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer {
+    margin-top: 100px;
+  }
+
+  .footer .col {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1 1 auto;
+  }
+
+  .images {
+    margin-left: -40px;
+    height: 193px;
+  }
+
+  .image1 {
+    background-image: url(./assets/mobile/image-keyboard.jpg);
+    width: 371px;
+    height: 331px;
+  }
+
+  .image2 {
+    flex-basis: 129px;
+  }
+
+  .image2::after {
+    background-image: url(./assets/mobile/image-phone-and-keyboard.jpg);
+    width: 129px;
+  }
+
+  .image3 {
+    background-image: url(./assets/mobile/image-glass-and-keyboard.jpg);
+    width: 220px;
+  }
+}
